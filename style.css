@@ -1,0 +1,85 @@
+.cards{
+    display: flex; /* o display serve para definir que posiçao a div vai ficar*/
+    flex-direction: column;
+    justify-content: center;  /* define como vai ficar alinhado os items */
+    align-items: center;    /* centralizar os items*/
+    gap: 15px;
+    padding: 40px 0 10px;
+}
+
+p{
+    color: black;
+}
+
+.legenda{
+    text-align: center;
+}
+
+body{
+    background-color: white;
+    margin: 0px;
+}
+
+body.escuro{
+    background-color: black;
+}
+
+body.escuro p,
+body.escuro h2{
+    color: white;
+}
+
+.formulario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+
+.formulario input,
+.formulario textarea{
+    margin-bottom: 8px;
+    width: 260px;
+}
+
+header{
+    text-align: left;
+    background-color: #210057;
+    padding: 20px;
+    margin: 0px;
+}
+
+a{
+    color: white;
+}
+
+#botao{
+    margin-left: auto;
+    border: none;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Galeria de cards */
+#colecao{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card{
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    max-width: 240px;
+}

@@ -1,0 +1,37 @@
+<!--- Classe: Catalogo-->
+
+<!DOCTYPE html>  <!-- Serve para informar ao navegador o tipo de documento, que no caso eh html -->
+<html lang="pt-BR"> <!-- a tag <html> eh a raiz do html. O "lang" especifica o idioma utilizado -->
+<head> <!-- define o que nao sera exibido no site, que sao dados sobre o documento-->
+    <meta charset="UTF-8">  <!--- O Charset define o conjunto de caracteres usado na pagina-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Catalogo </title> <!--- titulo da pagina-->
+    <link rel="stylesheet" href="style.css"> <!--- liga a folha de estilo (CSS) a pagina-->
+</head>
+<body> <!-- Eh o corpo do HTML, contendo elementos visuais da pagina-->
+    <header>
+        <nav>
+            <ul>
+                <li> <a href="index.html"> Home </a></li>
+                <li> <a href="fomrs.html"> Formulario </a></li>
+                <li id="botao">
+                    <button onclick="alterarFundo()" type="button">Mudar Cor</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="cards">
+        <img src="download.png" alt="logo do ifsp" width="200">
+        <a href="https://moodle.slt.ifsp.edu.br/my/" target="_blank"> <!--- a tag <a> serve para colocar link -->
+            <button> clica aqui para entrar no moodle</button> <!--- a tag <button> criar um botao interativo-->
+        </a>
+    </div>
+    <p class="legenda"> licao de desenvolvimento Web</p> <!-- tag de blocos de textos-->
+
+    <!-- Galeria: os cards sao criados pelo script.js a partir da rota GET /api/lista -->
+    <div id="colecao"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

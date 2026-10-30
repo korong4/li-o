@@ -1,0 +1,39 @@
+<!--- Classe: Catalogo-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Catalogo </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+      <nav>
+        <ul>
+            <li> <a href="index.html"> Home </a></li>
+            <li> <a href="fomrs.html"> Formulario </a></li>
+            <li id="botao">
+              <button onclick="alterarFundo()" type="button">Mudar Cor</button>
+            </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="formulario">
+        <!-- Os ids abaixo (titulo, imagem, descricao, paragrafo) sao lidos pelo formulario.js -->
+        <form id="meuFormulario">
+            <input id="titulo" type="text" placeholder="Título da obra" required> <br>
+            <input id="imagem" type="text" placeholder="Link da imagem" required> <br>
+            <input id="descricao" type="text" placeholder="Descrição da imagem" required> <br>
+            <textarea id="paragrafo" placeholder="Descrição da obra" required></textarea> <br>
+            <button type="submit"> enviar </button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="formulario.js"></script>
+</body>
+</html>
