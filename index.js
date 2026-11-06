@@ -1,30 +1,40 @@
 const express = require('express');
 const app = express();
 
+const mysql = require('mysql2');
+
 // Middleware essencial para ler o JSON vindo do formulário (POST)
 app.use(express.json());
 
 // Serve a pasta 'site' onde estão os arquivos estáticos (HTML, CSS, JS)
 app.use(express.static('site'));
 
-// Banco de dados temporário em memória RAM
-let lista = [
-    {
-        titulo: "obra de arte 1",
-        descricao: "ficticio",
-        imagem: "https://via.placeholder.com/150",
-        descImagem: "Imagem ficticia 1"
-    },
-    {
-        titulo: "obra de arte 2",
-        descricao: "ficticio2",
-        imagem: "https://via.placeholder.com/150",
-        descImagem: "Imagem ficticia 2"
+const db = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: "ifsp",
+    database: "temp"
+});
+
+db.connect((erro) =>{
+    if (erro){
+        console.log(erro);
     }
-];
+    else{
+        console.log('conectou!');
+    }
+    }
+);
 
 // Rota GET: Devolve a lista inteira para a página principal
 app.get('/api/lista', (req, res) => {
+    db.query('SELECT * FROM nao sei',(erro,resultados) => {
+        if (erro){
+            console.log(erro);
+            return res.status(500).json({erro : 'erro ao buscar dados'});
+        }
+        res.json(resultados);
+    });
     res.json(lista);
 });
 
